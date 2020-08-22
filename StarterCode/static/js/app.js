@@ -17,10 +17,15 @@ function runEnter() {
   
   // Get the value property of the input element
   var userInput = inputElement.property("value");  
-  console.log(userInput);
+  
+  //checking userInput, it worked, so pass to next step
+  //console.log(userInput);
 
-
-
+  // Use the form input to filter the data by date
+  var matchingCase = tableData.filter(record => record.datetime == userInput);
+  
+  //checking search records, worked, pass to next step
+  //console.log(matchingCase); 
 
 
 
