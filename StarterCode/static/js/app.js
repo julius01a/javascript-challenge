@@ -1,9 +1,10 @@
 // from data.js
 var tableData = data;
+
+// select the table body 
 var tbody = d3.select("tbody");
 
 // Display the whole table as opening default
-
 tableData.forEach((record) => {
     console.log(record);
     var row = tbody.append('tr');
@@ -15,14 +16,11 @@ tableData.forEach((record) => {
     });
 });
 
-
-
-
 // following are the methods to get input value, and filter by input value 
 // Select the button
 var button = d3.select("#filter-btn");
 // Select the form
-var form = d3.select("#datetime");
+//var form = d3.select("#datetime");
 // Create event handlers 
 button.on("click", runEnter);
 form.on("submit", runEnter);
@@ -32,7 +30,7 @@ function runEnter() {
   d3.event.preventDefault();
   
   // Select the input element and get the raw HTML node
-  var inputElement = form.select("#datetime");
+  var inputElement = d3.select("#datetime");
   
   // Get the value property of the input element
   var userInput = inputElement.property("value");  
@@ -65,7 +63,4 @@ else {
     });
   });
 };    
-
-
-
 };
