@@ -1,5 +1,11 @@
 // from data.js
 var tableData = data;
+
+
+
+
+
+// following are the methods to get input value, and filter by input value 
 // Select the button
 var button = d3.select("#filter-btn");
 // Select the form
@@ -26,8 +32,4 @@ function runEnter() {
   
   //checking search records, worked, pass to next step
   //console.log(matchingCase); 
-
-
-
-
 };
